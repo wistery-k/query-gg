@@ -1,0 +1,23 @@
+.match-win > .match-result-header {
+    background-color: #3d9ad1
+}
+
+.match-win > .match-result-body {
+    background-color: #64a8d1;
+}
+
+.match-lose > .match-result-header {
+    background-color: #ff5a40;
+}
+
+.match-lose > .match-result-body {
+    background-color: #ff8673;
+}
+
+.match-error > .match-result-header {
+    background-color: #bbbbbb;
+}
+
+.match-error > .match-result-body {
+    background-color: #dddddd;
+}

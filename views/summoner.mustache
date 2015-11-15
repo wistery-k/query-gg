@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/summoner.css">
+    <script src="/js/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <a href="?update=true">Update</a>
+    <ul class="nav nav-tabs" style="margin-bottom:5px;">
+        <li id="all"><a href="?filter=all">All</a></li>
+        <li id="top"><a href="?filter=top">Top</a></li>
+        <li id="mid"><a href="?filter=mid">Mid</a></li>
+        <li id="jungle"><a href="?filter=jungle">Jungle</a></li>
+        <li id="adc"><a href="?filter=adc">ADC</a></li>
+        <li id="support"><a href="?filter=support">Support</a></li>
+        <li id="nautilus"><a href="?filter=nautilus">Nautilus</a></li>
+        <li><a href="#" onclick="alert('高機能なボタンだと思った？残念！')">+</a></li>
+    </ul>
+    <table class="table-bordered">
+        <thead>
+        <tr><th>Metrics</th><th>Yours</th><th>Tier Avg.</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>CS/min (first 10 mins)</td><td id="cs-per-min"></td><td></td></tr>
+        <tr><td>Gold/min (first 10 mins)</td><td id="gold-per-min"></td><td></td></tr>
+        <tr><td>Exp/min (first 10 mins)</td><td id="exp-per-min"></td><td></td></tr>
+        <tr><td>ADC's CS/min (first 10 mins)</td><td id="cs-per-min-adc"></td><td>4.98</td></tr>
+        <tr><td>ADC's Gold/min (first 10 mins)</td><td id="gold-per-min-adc"></td><td>227.05</td></tr>
+        <tr><td>ADC's Exp/min (first 10 mins)</td><td id="exp-per-min-adc"></td><td>284.49</td></tr>
+        <tr><td>ADC's DamageTakenDiff/min (first 10 mins)</td><td id="tank-diff-per-min-adc"></td><td></td></tr>
+        <tr><td>Dragon Kill</td><td id="dragon-kill"></td><td></td></tr>
+        <tr><td>Champion Kill</td><td id="champion-kill"></td><td></td></tr>
+        <tr><td>Death</td><td id="death"></td><td></td></tr>
+        <tr><td>Assit</td><td id="assist"></td><td></td></tr>
+        <tr><td>Kill Contrib.</td><td id="kill-contribution"></td><td></td></tr>
+        </tbody>
+    </table>
+
+    <div id="match-list">
+
+    </div>
+    <script>
+        var filter = "{{filter}}";
+        var name = "{{name}}";
+        var update = {{#update}}true{{/update}}{{^update}}false{{/update}};
+    </script>
+    <script src="/js/summoner.js"></script>
+</body>
+</html>
